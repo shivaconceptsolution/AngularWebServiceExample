@@ -1,0 +1,24 @@
+<h1>Add Truck Details Here</h1>
+
+<form name="frm" id="frm">
+
+    <label for="name">Truck ID</label>
+    <input type="text" class="form-control" [(ngModel)]="tid" name="tid" required />
+    
+
+    
+      <label for="alterEgo">Truck Desc</label>
+      <input type="text" class="form-control" [(ngModel)]="tdesc" name="tdesc" />
+   
+
+    <button type="submit" class="btn btn-success" (click)="addTruck()">Submit</button>
+    <button type="submit" class="btn btn-success" (click)="deletetruck()">Delete</button>
+    <button type="submit" class="btn btn-success" (click)="updatetruck()">Update</button>
+    <button type="submit" class="btn btn-success" (click)="login()">Login</button>
+
+  </form>
+
+
+<ul *ngFor = "let data of httpdata">
+   <li>Name : {{data.name}} Address: {{data.address.city}}</li>
+</ul>
